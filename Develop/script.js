@@ -1,7 +1,7 @@
 let todayDate = moment().format("dddd, MMMM Do YYYY");
 $("#currentDay").html(todayDate);
 
-$(document).ready(function () {
+$(document).ready(() => {
   // saveBtn click listener 
   $(".saveBtn").on("click", function () {
       // Get nearby values of the description in JQuery
