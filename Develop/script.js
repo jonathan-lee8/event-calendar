@@ -1,6 +1,8 @@
+// Using Moment JS to format our date on the top of the page
 let todayDate = moment().format("dddd, MMMM Do YYYY");
 $("#currentDay").html(todayDate);
 
+// called when click on, until then nothing happens using ready
 $(document).ready(() => {
   // saveBtn click listener 
   $(".saveBtn").on("click", function () {
@@ -11,7 +13,8 @@ $(document).ready(() => {
       // Save text in local storage
       localStorage.setItem(time, text);
   })
-
+// this function will determine our past, present, future for color coordination in CSS
+// pull id parsed integer to compared to current time to get real time comparison
     function timeTracker() {
 
       let currentTime = moment().hour();
